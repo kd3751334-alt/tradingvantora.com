@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vantora — trading platform website prototype.">
+  <title>Vantora | Trading Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">V</span><span>VANTORA<small>TRADING PLATFORM</small></span></a>
+    <nav><a class="active" href="#dashboard">Dashboard</a><a href="#plans">Plans</a><a href="#wallet">Wallet</a><a href="#activity">Activity</a></nav>
+    <a class="admin-link" href="admin.html">Admin access ↗</a>
+  </header>
+
+  <main class="wrap">
+    <section class="welcome">
+      <div><p class="eyebrow">YOUR FINANCIAL OVERVIEW</p><h1>Welcome to Vantora</h1><p class="muted">A clear view of your account and activity.</p></div>
+      <div class="demo-pill"><span></span> PREVIEW MODE</div>
+    </section>
+
+    <section id="dashboard" class="stats">
+      <article class="stat-card"><p>Available wallet</p><h2>₱<span id="balance">2,500.00</span></h2><small>Sample balance · not real funds</small></article>
+      <article class="stat-card"><p>Active plans</p><h2 id="active-count">1</h2><small>Example account data</small></article>
+      <article class="stat-card"><p>Total invested</p><h2>₱<span id="invested">1,000.00</span></h2><small>Sample figure only</small></article>
+    </section>
+
+    <section id="plans" class="section">
+      <div class="section-head"><div><p class="eyebrow">EXPLORE</p><h2>Investment plan examples</h2></div><span class="muted small">Illustrative only</span></div>
+      <div class="plan-grid">
+        <article class="plan-card"><div class="plan-top"><span class="plan-icon">✦</span><span class="tag">STARTER</span></div><h3>Starter</h3><p class="muted">Example plan for exploring the interface.</p><div class="amount">₱200 <small>minimum example</small></div><ul><li>Account activity overview</li><li>Sample plan tracking</li><li>No guaranteed returns</li></ul><button class="btn btn-light" data-plan="Starter" data-amount="200">View plan</button></article>
+        <article class="plan-card featured"><div class="plan-top"><span class="plan-icon">◆</span><span class="tag tag-bright">POPULAR</span></div><h3>Growth</h3><p class="muted">Example plan for the prototype.</p><div class="amount">₱5,000 <small>example amount</small></div><ul><li>Sample portfolio panel</li><li>Weekly activity view</li><li>Trading involves risk</li></ul><button class="btn btn-primary" data-plan="Growth" data-amount="5000">View plan</button></article>
+        <article class="plan-card"><div class="plan-top"><span class="plan-icon">⬡</span><span class="tag">PREMIUM</span></div><h3>Premium</h3><p class="muted">Example plan for the prototype.</p><div class="amount">₱50,000 <small>example amount</small></div><ul><li>Expanded sample overview</li><li>Activity history mock-up</li><li>Capital may be lost</li></ul><button class="btn btn-light" data-plan="Premium" data-amount="50000">View plan</button></article>
+      </div>
+    </section>
+
+    <section class="two-col">
+      <article id="wallet" class="panel">
+        <div class="section-head"><div><p class="eyebrow">ACCOUNT</p><h2>Wallet</h2></div><span class="wallet-icon">₱</span></div>
+        <p class="muted">Try the buttons to see a local preview. No money moves.</p>
+        <label for="amount">Amount (PHP)</label>
+        <input id="amount" type="number" min="1" max="50000" value="500" placeholder="Enter amount">
+        <div class="button-row"><button class="btn btn-primary" id="topup">Request top-up</button><button class="btn btn-light" id="withdraw">Request withdrawal</button></div>
+        <p id="wallet-message" class="message" aria-live="polite"></p>
+      </article>
+      <article id="activity" class="panel">
+        <div class="section-head"><div><p class="eyebrow">RECENT UPDATES</p><h2>Activity</h2></div><span class="small muted">Sample entries</span></div>
+        <div class="activity-row"><span class="activity-dot"></span><div><b>Welcome bonus</b><small>Sample entry · Today</small></div><strong class="positive">+₱500.00</strong></div>
+        <div class="activity-row"><span class="activity-dot blue"></span><div><b>Starter plan</b><small>Sample entry · Yesterday</small></div><strong>₱1,000.00</strong></div>
+        <div class="activity-row"><span class="activity-dot orange"></span><div><b>Wallet review</b><small>Illustrative status</small></div><strong class="pending">Pending</strong></div>
+      </article>
+    </section>
+
+    <section class="notice"><strong>Important notice</strong><p>This is a non-functional website prototype. All balances, plans, transactions, and displayed amounts are examples only. No real trading, deposits, withdrawals, or investment services are provided. Do not accept public funds or advertise returns until the required legal, regulatory, security, and operational requirements have been reviewed and satisfied.</p></section>
+  </main>
+  <footer><span>© 2026 Vantora</span><span>Prototype · Not a financial service</span></footer>
+  <dialog id="plan-dialog"><div class="dialog-inner"><button class="close" id="close-dialog" aria-label="Close">×</button><p class="eyebrow">PLAN DETAILS</p><h2 id="dialog-title">Plan</h2><p id="dialog-description" class="muted"></p><p class="notice-text">This plan is a visual example only. It does not accept investments or promise returns.</p><button class="btn btn-primary" id="dialog-ok">Got it</button></div></dialog>
+  <script src="script.js"></script>
+</body>
+</html>
